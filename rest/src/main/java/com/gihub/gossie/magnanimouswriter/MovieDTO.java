@@ -1,6 +1,6 @@
 package com.gihub.gossie.magnanimouswriter;
 
-class MovieDTO {
+public class MovieDTO {
 
     private String name;
     private String genre;

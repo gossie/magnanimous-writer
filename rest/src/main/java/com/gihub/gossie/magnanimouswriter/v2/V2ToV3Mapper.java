@@ -1,8 +1,18 @@
 package com.gihub.gossie.magnanimouswriter.v2;
 
-import java.util.List;
+import com.gihub.gossie.magnanimouswriter.MovieDTO;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
-public interface V2ToV3Mapper {
+@RequiredArgsConstructor(access = AccessLevel.PACKAGE)
+@Component
+class V2ToV3Mapper {
 
-    List<MovieDTOV2> determineAllMovies();
+    MovieDTOV2 map(MovieDTO movie) {
+        MovieDTOV2 mappedMovie = new MovieDTOV2();
+        mappedMovie.setName(movie.getName());
+        mappedMovie.setGenre(String.valueOf(movie.getGenre()));
+        return mappedMovie;
+    }
 }
