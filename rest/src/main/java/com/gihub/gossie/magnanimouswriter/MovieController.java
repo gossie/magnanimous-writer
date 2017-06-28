@@ -3,6 +3,7 @@ package com.gihub.gossie.magnanimouswriter;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -11,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/api/movies")
-@RequiredArgsConstructor
+@RequiredArgsConstructor(access = AccessLevel.PACKAGE)
 public class MovieController {
 
-    private static final String MEDIA_TYPE = "application/vnd.household.v1+json";
+    private static final String MEDIA_TYPE = "application/vnd.magnanimouswriter.v3+json";
 
     private final MovieService movieService;
     private final MovieDTOMapper movieMapper;

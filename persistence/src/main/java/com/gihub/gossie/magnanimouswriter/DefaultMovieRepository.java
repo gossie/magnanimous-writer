@@ -3,9 +3,10 @@ package com.gihub.gossie.magnanimouswriter;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
+@RequiredArgsConstructor(access = AccessLevel.PACKAGE)
 public class DefaultMovieRepository implements MovieRepository {
 
     private final MovieEntityMapper movieMapper;

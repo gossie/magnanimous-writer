@@ -2,9 +2,10 @@ package com.gihub.gossie.magnanimouswriter;
 
 import java.util.List;
 
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
+@RequiredArgsConstructor(access = AccessLevel.PACKAGE)
 public class MovieService {
 
     private final MovieRepository movieRepository;
