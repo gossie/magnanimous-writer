@@ -6,4 +6,6 @@ public interface MovieRepository {
 
     List<Movie> determineAllMovies();
 
+    void createMovie(Movie movie);
+
 }

@@ -17,4 +17,9 @@ public class DefaultMovieRepository implements MovieRepository {
         return movieEntityRepsitory.findAll().stream().map(movieMapper::map).collect(Collectors.toList());
     }
 
+    @Override
+    public void createMovie(Movie movie) {
+        movieEntityRepsitory.save(movieMapper.map(movie));
+    }
+
 }

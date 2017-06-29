@@ -6,10 +6,13 @@ import java.util.stream.Collectors;
 import com.gihub.gossie.magnanimouswriter.MovieController;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 @Controller
 @RequestMapping("/api/movies")
@@ -25,5 +28,11 @@ public class MovieControllerV2 {
     public ResponseEntity<List<MovieDTOV2>> getMovies() {
         List<MovieDTOV2> mappedMovies = movieController.getMovies().getBody().stream().map(mapper::map).collect(Collectors.toList());
         return ResponseEntity.ok(mappedMovies);
+    }
+
+    @PostMapping(consumes = MEDIA_TYPE)
+    @ResponseStatus(HttpStatus.OK)
+    public void createMovie(MovieDTOV2 movie) {
+        movieController.createMovie(mapper.map(movie));
     }
 }

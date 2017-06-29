@@ -14,4 +14,11 @@ class V1ToV2Mapper {
         mappedMovie.setName(movie.getName());
         return mappedMovie;
     }
+
+    public MovieDTOV2 map(MovieDTOV1 movie) {
+        MovieDTOV2 mappedMovie = new MovieDTOV2();
+        mappedMovie.setName(movie.getName());
+        mappedMovie.setGenre("UNKNOWN");
+        return mappedMovie;
+    }
 }

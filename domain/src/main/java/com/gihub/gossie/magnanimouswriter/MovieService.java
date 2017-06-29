@@ -14,4 +14,8 @@ public class MovieService {
         return movieRepository.determineAllMovies();
     }
 
+    public void createMovie(Movie movie) {
+        movieRepository.createMovie(movie);
+    }
+
 }

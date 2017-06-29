@@ -15,4 +15,11 @@ class V2ToV3Mapper {
         mappedMovie.setGenre(String.valueOf(movie.getGenre()));
         return mappedMovie;
     }
+
+    public MovieDTO map(MovieDTOV2 movie) {
+        MovieDTO mappedMovie = new MovieDTO();
+        mappedMovie.setName(movie.getName());
+        mappedMovie.setGenre(String.valueOf(movie.getGenre()));
+        return mappedMovie;
+    }
 }

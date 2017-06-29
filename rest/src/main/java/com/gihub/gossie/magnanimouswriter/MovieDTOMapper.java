@@ -8,4 +8,8 @@ class MovieDTOMapper {
         movieDTO.setGenre(String.valueOf(movie.getGenre()));
         return movieDTO;
     }
+
+    public Movie map(MovieDTO movie) {
+        return new Movie(null, movie.getName(), Genre.valueOf(movie.getGenre()));
+    }
 }
