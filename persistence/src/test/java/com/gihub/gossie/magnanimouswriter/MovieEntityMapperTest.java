@@ -11,7 +11,7 @@ public class MovieEntityMapperTest {
 
     @Before
     public void setUp() {
-        movieMapper = new MovieEntityMapper();
+        movieMapper = new MovieEntityMapper(new RatingEntityMapper());
     }
 
     @Test

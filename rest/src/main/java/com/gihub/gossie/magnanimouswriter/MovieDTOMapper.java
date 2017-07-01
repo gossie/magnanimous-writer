@@ -6,6 +6,7 @@ class MovieDTOMapper {
         MovieDTO movieDTO = new MovieDTO();
         movieDTO.setName(movie.getName());
         movieDTO.setGenre(String.valueOf(movie.getGenre()));
+        movieDTO.setAverageRating(movie.determineAverageRaiting());
         return movieDTO;
     }
 

@@ -1,9 +1,10 @@
 package com.gihub.gossie.magnanimouswriter;
 
-import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
 
 @Configuration
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
@@ -11,8 +12,12 @@ public class PersistenceContext {
 
     private final MovieEntityRepsitory movieEntityRepsitory;
 
+    public RatingEntityMapper ratingEntityMapper() {
+        return new RatingEntityMapper();
+    }
+    
     public MovieEntityMapper movieEntityMapper() {
-        return new MovieEntityMapper();
+        return new MovieEntityMapper(ratingEntityMapper());
     }
 
     @Bean

@@ -17,8 +17,15 @@ public class Movie {
     private final Genre genre;
     private final List<Rating> ratings = new ArrayList<>();
 
-    public double determineRaiting() {
-        return ((double) ratings.stream().mapToInt(Rating::getNumberOfStars).reduce(0, (a, b) -> a + b)) / ratings.size();
+    public double determineAverageRaiting() {
+        double sum = ratings.stream()
+        		.mapToInt(Rating::getNumberOfStars)
+        		.reduce(0, (a, b) -> a + b);
+		return Math.round((sum / ratings.size()) * 10.0) / 10.0;
+    }
+    
+    public void addRaiting(Rating rating) {
+    	ratings.add(rating);
     }
 
     public List<Rating> getRaitings() {
