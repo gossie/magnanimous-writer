@@ -1,4 +1,4 @@
-# magnanimous-writer
+# Magnanimous writer
 The repository contains a Spring-Boot implementation of a magnanimous writer to handle several versions of a REST API. Also the application implements
 ## Run the application
 Compile all parts of the application by running `mvn clean package` on the parent. Start the application with `java -jar app/target/magnanimouswriter-app-0.0.1-SNAPSHOT.jar`.
