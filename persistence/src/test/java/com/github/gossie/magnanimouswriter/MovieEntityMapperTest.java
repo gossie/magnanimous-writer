@@ -1,5 +1,7 @@
 package com.github.gossie.magnanimouswriter;
 
+import static com.github.gossie.magnanimouswriter.MovieAssert.assertThat;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,7 +20,7 @@ public class MovieEntityMapperTest {
 
         Movie movie = movieMapper.map(movieEntity);
 
-        MovieAssert.assertThat(movie).hasName("Stirb langsam").hasGenre(Genre.ACTION);
+        assertThat(movie).hasName("Stirb langsam").hasGenre(Genre.ACTION);
     }
 
 }
