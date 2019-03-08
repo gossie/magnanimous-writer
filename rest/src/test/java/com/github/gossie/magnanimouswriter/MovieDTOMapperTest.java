@@ -1,6 +1,6 @@
 package com.github.gossie.magnanimouswriter;
 
-import static com.gihub.gossie.magnanimouswriter.MovieDTOAssert.assertThat;
+import static com.github.gossie.magnanimouswriter.MovieDTOAssert.assertThat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -20,7 +20,7 @@ public class MovieDTOMapperTest {
 
         MovieDTO movieDTO = mapper.map(movie);
 
-        MovieDTOAssert.assertThat(movieDTO).hasName("Geschenkt ist noch zu teuer").hasGenre("COMEDY");
+        assertThat(movieDTO).hasName("Geschenkt ist noch zu teuer").hasGenre("COMEDY");
     }
 
 }

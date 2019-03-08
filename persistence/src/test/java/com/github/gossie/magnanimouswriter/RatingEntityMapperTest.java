@@ -1,7 +1,7 @@
 package com.github.gossie.magnanimouswriter;
 
-import static com.gihub.gossie.magnanimouswriter.RatingAssert.assertThat;
-import static com.gihub.gossie.magnanimouswriter.RatingEntityAssert.assertThat;
+import static com.github.gossie.magnanimouswriter.RatingAssert.assertThat;
+import static com.github.gossie.magnanimouswriter.RatingEntityAssert.assertThat;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -20,7 +20,7 @@ public class Movie {
     public double determineAverageRaiting() {
         double sum = ratings.stream()
         		.mapToInt(Rating::getNumberOfStars)
-        		.reduce(0, (a, b) -> a + b);
+        		.sum();
 		return Math.round((sum / ratings.size()) * 10.0) / 10.0;
     }
     

@@ -12,9 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.gihub.gossie.magnanimouswriter.MovieController;
-
 import com.github.gossie.magnanimouswriter.MovieController;
+
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 

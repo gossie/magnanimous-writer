@@ -1,6 +1,5 @@
 package com.github.gossie.magnanimouswriter.v2;
 
-import com.gihub.gossie.magnanimouswriter.MovieDTO;
 import com.github.gossie.magnanimouswriter.MovieDTO;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

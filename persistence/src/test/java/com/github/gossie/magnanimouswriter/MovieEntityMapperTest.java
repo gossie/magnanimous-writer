@@ -1,7 +1,5 @@
 package com.github.gossie.magnanimouswriter;
 
-import static com.gihub.gossie.magnanimouswriter.MovieAssert.assertThat;
-
 import org.junit.Before;
 import org.junit.Test;
 
