@@ -31,7 +31,7 @@ public class MovieController {
     }
 
     @PostMapping(consumes = MEDIA_TYPE)
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.CREATED)
     public void createMovie(@RequestBody MovieDTO movie) {
         movieService.createMovie(movieMapper.map(movie));
     }
